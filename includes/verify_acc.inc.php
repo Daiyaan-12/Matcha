@@ -1,30 +1,29 @@
 <?php
-    require '../config/database.php';
-    
-    if(isset($_POST['verify']))
-    {
-        $email = trim($_POST['email']);
-        $sql = "SELECT `Users` WHERE email='$email'";
-        $sql = $db_connect->prepare("UPDATE `Users` WHERE email='$email'");
-        $sql->execute();
-        
-        echo 'Account Successfully Confirmed!';
-        
-        $stmt = $db_connect->prepare($sql);
-        $sql = "UPDATE 'Users' SET 'verified' = 1 WHERE 'verification_code' = ?";
-        $stmt->bindParam(1, $_GET['verification_code']);
-        
-        if ($stmt->execute())
-        {
-            echo "E-mail verified Successfully!";
-            header('refresh:3; url="../login.php"');
-            exit();
-        }
-        else
-        {
-            echo "Verification Failed! Try to signup again!";
-            header('refresh:3; url="../login.php"');
-            exit();
-        }
-    }
+
+include '../config/database.php';
+
+$sql = "SELECT UserID FROM users WHERE verification_code = ? AND verified = 0";
+$stmt = $db_connect->prepare($sql);
+$stmt->bindParam(1, $_GET['code']);
+$stmt->execute();
+$num = $stmt->rowCount();
+if ($num == 1)
+{
+	$sql = "UPDATE users SET verified = 1 WHERE verification_code = ?";
+	$stmt = $db_connect->prepare($sql);
+	$stmt->bindParam(1, $_GET['code']);
+	if ($stmt->execute())
+	{
+		header("Location: ../login.php?success=verified");
+		exit();
+	}
+	else {
+		header("Location: ../login.php?error=updatefailed");
+		exit();
+	}
+}
+else{
+	header("Location: ../login.php?error=nouser");
+	exit();
+}
 ?>
