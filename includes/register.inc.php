@@ -1,5 +1,6 @@
 <?php
 if (isset($_POST['sign-up'])) {
+    require '../config/setup.php';
     require '../config/database.php';
     $FirstName = $_POST['fName'];
     $LastName = $_POST['lName'];
@@ -48,7 +49,7 @@ if (isset($_POST['sign-up'])) {
                 exit();
             } else {
                 $verificationcode =  md5(uniqid(bin2hex(random_bytes(8)), true));
-                $verificationlink = "http://localhost:8080/Matcha-fixed/verify_acc.php?code=" . $verificationcode;
+                $verificationlink = "http://localhost:8080/matcha/verify_acc.php?code=" . $verificationcode;
                 $subject = "Email Verification!";
                 $msg = "s
                 <p>Hi $FirstName,</p>
