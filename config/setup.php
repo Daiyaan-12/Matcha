@@ -35,13 +35,13 @@
         $db_connect = new PDO("mysql:host=$host;dbname=$db", $user, $pass);
         $db_connect->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         $user_table = "CREATE TABLE IF NOT EXISTS Users (
-            UserID INT(255) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+            UserID INT(255) AUTO_INCREMENT PRIMARY KEY NOT NULL,
             FirstName VARCHAR(255) NOT NULL,
             LastName VARCHAR(255) NOT NULL,
             email VARCHAR(255) NOT NULL,
             password varchar(264) NOT NULL,
             verification_code varchar(264) NOT NULL,
-            verified BOOLEAN
+            verified BIT DEFAULT 0 NOT NULL
         )";
 
     $db_connect->exec($user_table);
