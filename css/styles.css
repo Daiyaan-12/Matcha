@@ -1,0 +1,88 @@
+@charset "UTF-8";
+
+/* FORM STYLES */
+*****************************************************************
+
+div
+{
+    border-radius: 5px;
+    background-color: none;
+    padding: 20px;
+    
+}
+
+.form
+{
+    width: 600px;
+    background-color: rgb(85, 140, 150);
+    border: 5px solid rgb(85, 140, 150);
+    margin: 0 auto;
+}
+
+input[type=text], select
+{
+    width: 75%;
+    padding: 15px 20px;
+    margin: 20px 10px;
+    display: inline-block;
+    border: 1px solid rgb(15, 22, 54);
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit]
+{
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover
+{
+    background-color: #45a049;
+}
+
+input[type=password], select
+{
+    width: 75%;
+    padding: 15px 20px;
+    margin: 20px 10px;
+    display: inline-block;
+    border: 1px solid rgb(15, 22, 54);
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=email], select
+{
+    width: 75%;
+    padding: 15px 20px;
+    margin: 20px 10px;
+    display: inline-block;
+    border: 1px solid rgb(15, 22, 54);
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+
+/* FONTS */
+************************************************************
+
+h1
+{
+    font-family: "Atma 500", cursive, sans-serif;
+    font-weight: bolder;
+    font-optical-sizing: auto;
+    overflow: fixed;
+    font-size: 90px;
+    color: rgb(15, 22, 54);
+    padding-top: none;
+    padding-bottom: none;
+    text-align-last: center;
+    letter-spacing: 22px;    
+}

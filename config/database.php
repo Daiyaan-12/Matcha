@@ -4,7 +4,7 @@
 
     $server_name = "localhost";
     $db_username = "root";
-    $db_password = "Francis1974";
+    $db_password = "wethinkcode";
     $db_name = "Matcha";
         
     try

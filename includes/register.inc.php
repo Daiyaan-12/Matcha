@@ -49,7 +49,7 @@ if (isset($_POST['sign-up'])) {
                 exit();
             } else {
                 $verificationcode =  md5(uniqid(bin2hex(random_bytes(8)), true));
-                $verificationlink = "http://localhost:8080/matcha/includes/verify_acc.inc.php?code=" . $verificationcode;
+                $verificationlink = "http://localhost:8080/Matcha/includes/verify_acc.inc.php?code=" . $verificationcode;
                 $subject = "Email Verification!";
                 $msg = "s
                 <p>Hi $FirstName,</p>
@@ -72,7 +72,7 @@ if (isset($_POST['sign-up'])) {
                     $stmt->bindParam(5, $verificationcode);
                     $stmt->execute();
                     header("Location: ../login.php?success=signup&uid=" . $FirstName . $LastName . "&email=" . $email);
-                    exit();
+                    die();
                 } else {
                      header("Location: ../register.php?error=mailerror");
                      exit();

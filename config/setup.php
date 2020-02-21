@@ -2,7 +2,7 @@
 
     $host = "localhost";
     $user = "root";
-    $pass = "Francis1974";
+    $pass = "wethinkcode";
     $db = "Matcha";
 
     try
