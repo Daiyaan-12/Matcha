@@ -2,7 +2,7 @@
 
     $host = "localhost";
     $user = "root";
-    $pass = "wethinkcode";
+    $pass = "Francis1974";
     $db = "Matcha";
 
     try
@@ -19,7 +19,7 @@
 
     try
     {
-       $sql = "CREATE DATABASE ".$db;
+       $sql = "CREATE DATABASE IF NOT EXISTS ".$db;
        $db_connect->exec($sql);
        echo "Matcha Database created <br/>";
     }
@@ -34,7 +34,7 @@
         //creating user database table
         $db_connect = new PDO("mysql:host=$host;dbname=$db", $user, $pass);
         $db_connect->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $user_table = "CREATE TABLE Users (
+        $user_table = "CREATE TABLE IF NOT EXISTS Users (
             UserID INT(255) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
             FirstName VARCHAR(255) NOT NULL,
             LastName VARCHAR(255) NOT NULL,

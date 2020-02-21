@@ -1,9 +1,10 @@
 <?php
+
     session_start();
 
     $server_name = "localhost";
     $db_username = "root";
-    $db_password = "wethinkcode";
+    $db_password = "Francis1974";
     $db_name = "Matcha";
         
     try
