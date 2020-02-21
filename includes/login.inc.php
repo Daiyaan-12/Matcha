@@ -9,7 +9,7 @@ if (isset($_POST['login'])){
     }
     else{
          try{
-         $sql = "SELECT * FROM `users` WHERE email=:email";
+         $sql = "SELECT * FROM `users` WHERE email=:email AND verified = 1";
          $stmt  = $db_connect->prepare($sql);
          $stmt->bindParam(":email", $email);
          $stmt->execute();
@@ -17,7 +17,7 @@ if (isset($_POST['login'])){
          $passCheck = password_verify($password, $result['password']);
          if (!$result)
             {
-                header("Location: ../login.php?error=nouser");
+                header("Location: ../login.php?error=nouser-or-accountnotverified");
                 exit();
             }
             if ($passCheck == false) 
