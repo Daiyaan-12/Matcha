@@ -8,11 +8,12 @@
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
-<h1>Sparklepony's love club</h1>
-<h2>Login to existing account</h2>
-    
+    <div>
+    <h1>Sparklepony's love club</h1>
+    </div>
     <div class="form">
         <form action="includes/login.inc.php" method="POST" align="center">
+        <h2>Login</h2>
         <label for="email"> Email Address: </label> <br/>
         <input type="email" name="email" placeholder="Email Address" required>
         <br>
@@ -20,25 +21,29 @@
         <input type="password" name="pwd" placeholder="Password" required>
         <br>
         <button type="submit" name="login">Login</button>
-        
+        <br>  <br>
         </form>
     </div>
     <br>
         <!-- FORGOT_PASSWORD -->
     <div class="form">
         <form action="../includes/pwd_forgot.php" method="post" align="center">
-        <label for="pwd-forgot"> &#128563;Forgot Password? </label> <br/>
+        <h2> &#128563; Forgot Password?</h2>
+        <label for="pwd-forgot"> Email Address: </label> <br/>
         <input type="email" name="email" placeholder="Email address" required> <br/>
             <button type="submit" class="button button1" name="pwd_forgot"> Reset My Password</button>
+            <br>  <br>
         </form>
     </div>
 
     <br>
-    <!-- SIGNUP_FORM -->
+        <!-- SIGNUP_FORM -->
     <div class="form">
         <form action="./register.php" method="post" align="center">
-        <label for="register"> Don't have an account yet? </label> <br/>
+        <h2> Don't have an account yet?</h2>
+        <label for="register"> Click below to create an account </label> <br/>
             <button type="submit" class="button button1" name="register"> Register </button>
+            <br>  <br>
         </form>
     </div>
 </body>
