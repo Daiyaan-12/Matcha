@@ -61,7 +61,7 @@
     echo "Table 'User' successfully created";
 
         //creating image database table
-      $img_table = "CREATE TABLE Images (
+      $img_table = "CREATE TABLE IF NOT EXISTS Images (
         ImageID INT(255) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
         UserID VARCHAR(30) NOT NULL, 
         img_title TEXT,
