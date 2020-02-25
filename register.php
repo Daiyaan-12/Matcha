@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
-<h1>Register to Sparklepony's Love Chat</h1>
+<h3>Register to Sparklepony's Love Chat</h3>
+<hr width="75%">
+
   <div class="form">
     <form action="includes/register.inc.php" method="POST" align="center">
     <h2> Please complete all the fields </h2>

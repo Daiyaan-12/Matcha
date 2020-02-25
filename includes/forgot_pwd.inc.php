@@ -44,8 +44,8 @@
 
     else
     {
-        echo 'Username does not Exist! Please register!';
-        header('refresh:5; url="../register.php"');
+        echo 'Your credentials does not exist in our database!' ."<br>". '' ."<br>".'Please register!';
+        header('refresh:3; url="../register.php"');
     }
     
 ?>

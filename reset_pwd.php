@@ -18,13 +18,14 @@
 
 <!-- PWD_RESET_FORM -->
 <div>
-    <h3>Change your Access Code!</h3>
+    <h3>Change your Password!</h3>
         <hr width="75%">
 
         <div class="form">
             <form action="includes/reset_pwd.inc.php" method="post" align="center">
-                <label for="username"><b>Alias</b></label> <br/>
-                    <input type="text" placeholder="Username" name="username" required><br/>
+            <br/> 
+            <label for="email"><b>Email Address</b></label> <br/>
+                    <input type="text" placeholder="Email Address" name="email" required><br/>
                 <input type="hidden" name="email" value="<?php echo ($_GET['ID']);?>">
                 <label for="pwd"><b>New Password</b></label><br/>
                     <input type="password" placeholder="Enter Password" name="newpassword" required><br/>

@@ -41,7 +41,20 @@
             email VARCHAR(255) NOT NULL,
             password varchar(264) NOT NULL,
             verification_code varchar(264) NOT NULL,
-            verified BIT DEFAULT 0 NOT NULL
+            verified BIT DEFAULT 0 NOT NULL,
+            gender varchar(264) ,
+            preference varchar(264) ,
+            biography varchar(264),
+            age INT(2),
+            love BOOLEAN DEFAULT 0,
+            fun BOOLEAN DEFAULT 0,
+            fitness BOOLEAN DEFAULT 0,
+            nature BOOLEAN DEFAULT 0,
+            tech BOOLEAN DEFAULT 0,
+            meme BOOLEAN DEFAULT 0,
+            science BOOLEAN DEFAULT 0,
+            animals BOOLEAN DEFAULT 0,
+            foodie BOOLEAN DEFAULT 0     
         )";
 
     $db_connect->exec($user_table);
