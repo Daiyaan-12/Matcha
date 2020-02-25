@@ -1,5 +1,5 @@
 <?php 
-$name = $_SESSION['FirstName'];?>
+// $name = $_SESSION['FirstName'];?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,7 +7,7 @@ $name = $_SESSION['FirstName'];?>
 </head>
 <body>
 <h1>Enter Your profile Details</h1>
-    <form action="/includes/updatebio.inc.php" method="POST">
+    <form action="/matcha/includes/updatebio.inc.php" method="POST">
     <input type="text" name="age" placeholder="Age">
     <p>select your gender</p>
     <select name="gender">
@@ -17,13 +17,13 @@ $name = $_SESSION['FirstName'];?>
     </select>
     <p>What is your sexual preferance</p>
     <select name="sex-pref">
-        <option value="het">Heterosexual</option>
-        <option value="homo">Homosexual</option>
-        <option value="bi">Bisexual</option>
+        <option value="het">Male</option>
+        <option value="homo">Female</option>
+        <option value="bi">Both</option>
     </select>
-    <textarea placeholder="Let everyone know a litte bit about YOU."></textarea>
+    <textarea placeholder="Let everyone know a litte bit about YOU." name="bio"></textarea>
     <br>
-    <p>choose 3 intrests</p>
+    <p>choose 3 interests</p>
     <br>
     <input type="checkbox" id="love" name="love">
 <label for="love">#Love</label><br>
@@ -43,7 +43,7 @@ $name = $_SESSION['FirstName'];?>
 <label for="animals">#Animals</label><br>
 <input type="checkbox" id="foodie" name="foodie">
 <label for="foodie">#foodie</label><br>
-<textarea>hello</textarea>
+
     <button type="submit" name="edit-info">Submit changes</button>
     </form>
     <br>
