@@ -27,7 +27,7 @@
     <br>
         <!-- FORGOT_PASSWORD -->
     <div class="form">
-        <form action="../includes/pwd_forgot.php" method="post" align="center">
+        <form action="includes/forgot_pwd.inc.php" method="post" align="center">
         <h2> &#128563; Forgot Password?</h2>
         <label for="pwd-forgot"> Email Address: </label> <br/>
         <input type="email" name="email" placeholder="Email address" required> <br/>

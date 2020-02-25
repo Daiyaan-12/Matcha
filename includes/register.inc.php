@@ -60,7 +60,7 @@ if (isset($_POST['sign-up'])) {
                 // Always set content-type when sending HTML email
                 //$headers = "MIME-Version: 1.0" . "\r\n";
                 $headers = "Content-type:text/html;charset=UTF-8" . "\r\n";
-                $headers .= "From: no-reply@gmail.com";
+                $headers .= "From: no-reply@matcha_sparklepony.com";
                 if (mail($email, $subject, $msg, $headers)) {
                     $sql = "INSERT INTO `Users` (FirstName, LastName, email, password, verification_code) VALUES (?, ?, ?, ?, ?)";
                     $hashed =  password_hash($password, PASSWORD_DEFAULT);
