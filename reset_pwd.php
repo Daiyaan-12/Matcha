@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-        <title>Reset Password || Matcha</title>
+        <title>Matcha || Reset Password</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
    
@@ -17,13 +17,9 @@
 
 
 <!-- PWD_RESET_FORM -->
-<div>
-    <h3>Change your Password!</h3>
-        <hr width="75%">
-
-        <div class="form">
+        <div><div class="form">
             <form action="includes/reset_pwd.inc.php" method="post" align="center">
-            <br/> 
+            <h2> Reset Your Password</h2>
             <label for="email"><b>Email Address</b></label> <br/>
                     <input type="text" placeholder="Email Address" name="email" required><br/>
                 <input type="hidden" name="email" value="<?php echo ($_GET['ID']);?>">
@@ -33,7 +29,7 @@
                     <input type="password" placeholder="Confirm New Password" name="confirm_new_password" required><br/>
                 <button type="submit" name="change_pwd" class="button button1">Update Password!</button>
             </form>
-        </div>
+        </div> </div>
 
 </body>
 </html>

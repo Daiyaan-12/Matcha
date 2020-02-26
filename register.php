@@ -29,7 +29,7 @@
     <label for="confirmpassword"> Confirm your Password: </label> <br/>
     <input type="password" name="pwd-repeat" placeholder="Password Reapeat" required>
     <br>
-    <button type="submit" name="sign-up">Register</button>
+    <button type="submit" class="button button1" name="sign-up">Register</button>
     </form>
  </div>
 <a href="login.php"><button>Home</button></a>
