@@ -44,10 +44,10 @@
 
     <textarea maxlength="300" placeholder="Let everyone know a litte bit about YOU." name="bio"></textarea>
     <br>
-    <p>choose 3 interests</p>
+    <p>Please pick one or more interests</p>
     <br>
 
-    <label for='formCountries[]'>Select the countries that you have visited:</label><br>
+    <!-- <label for='formCountries[]'>Select the countries that you have visited:</label><br>
 <select multiple="multiple" name="interests[]" size="1">
     <option value="love">#Love </option>
     <option value="fun">#Fun </option>
@@ -56,7 +56,7 @@
     <option value="technology">#Technology</option>
   
 </select>
- 
+  -->
 
     <!-- <input type="checkbox" name="interest[]" value="" /><br />
     <input type="checkbox" name="interest[]" value="" /><br />
@@ -64,7 +64,7 @@
     <input type="checkbox" name="interest[]" value="" /><br />
     <input type="checkbox" name="interest[]" value="" /> -->
 
-    <!-- <input type="checkbox" id="love" name="love">
+ <input type="checkbox" id="love" name="love">
 <label for="love">#Love</label><br>
 <input type="checkbox" id="fun" name="fun" >
 <label for="fun">#fun</label><br>
@@ -81,7 +81,7 @@
 <input type="checkbox" id="animals" name="animals" >
 <label for="animals">#Animals</label><br>
 <input type="checkbox" id="foodie" name="foodie" >
-<label for="foodie">#foodie</label><br> -->
+<label for="foodie">#foodie</label><br> 
 
     <button type="submit" name="edit_profile">Submit changes</button>
     </form>
