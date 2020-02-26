@@ -19,6 +19,14 @@ div
     margin: 0 auto;
 }
 
+.form2
+{
+    width: 1000px;
+    background-color: rgb(85, 140, 150);
+    border: 5px solid rgb(85, 140, 150);
+    margin: 0 auto;
+}
+
 input[type=text], select
 {
     width: 75%;
@@ -89,6 +97,29 @@ input[type=email], select
     color: black; 
     border: 2px solid rgb(15, 22, 54);
 }
+
+
+
+
+/* COLUMNS  */
+************************************************************
+* {
+    box-sizing: border-box;
+  }
+  
+.column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    height: 300px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
 
 
 
