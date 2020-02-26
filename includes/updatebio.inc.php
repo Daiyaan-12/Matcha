@@ -9,16 +9,15 @@
         $bio = trim($_POST['bio']);
         $gender =  trim($_POST['gender']);
         $preference = trim($_POST['pref']);
-        $love = ($_POST['love']);
         $fun = ($_POST['fun']);
         $fitness = ($_POST['fitness']);
         $nature = ($_POST['nature']);
-        $tech = ($_POST['tech']);
+        $tech = ($_POST['technology']);
         $meme = ($_POST['meme']);
         $science = ($_POST['science']);
         $animals = ($_POST['animals']);
         $foodie = ($_POST['foodie']);
-
+        
         $sql = $db_connect->prepare("UPDATE `Users` SET age='$age', biography='$bio' WHERE email='$email'");
         $sql->execute();
         var_dump(); 
@@ -31,7 +30,7 @@
             $sql = $db_connect->prepare("UPDATE `Users` SET gender= '$gender' WHERE email='$email'");
             $sql->execute();
         }
-    
+        
         echo $row['pref'];
         if($row['pref'] = "female" || $row['pref'] = "male" || $row['pref'] = "both")
         {
@@ -39,12 +38,23 @@
             $sql->execute();
         }
 
-        echo $row['interest'];
-        if($row['pref'] = "female" || $row['pref'] = "male" || $row['pref'] = "both")
+
+        
+        // ! TO FIX ............................
+        $Interests = $_POST['interest'];
+        if(empty($Interests)) 
         {
-            $sql = $db_connect->prepare("UPDATE `Users` SET preference= '$preference' WHERE email='$email'");
+            echo("You didn't select any interests.");
+        } 
+        else 
+        {
+            if(IsChecked('interest','Love'))
+        {
+            $sql = $db_connect->prepare("UPDATE `Users` SET love = 1 WHERE email='$email'");
             $sql->execute();
         }
     }
+}
 
 ?> 
+ 
