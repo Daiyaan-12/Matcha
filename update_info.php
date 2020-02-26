@@ -46,45 +46,24 @@
     <br>
     <p>choose 3 interests</p>
     <br>
-    <input list="interest" name="interest1">
-  <datalist id="interest1">
-    <option value="#Love">
-    <option value="#Fun">
-    <option value="#Fitness">
-    <option value="#Nature">
-    <option value="#Technology">
-    <option value="#Meme culture">
-    <option value="#Science">
-    <option value="#Animals">
-    <option value="#Food Junkie">
-  </datalist>
 
-  <input list="interest" name="interest2">
-  <datalist id="interest2">
-    <option value="#Love">
-    <option value="#Fun">
-    <option value="#Fitness">
-    <option value="#Nature">
-    <option value="#Technology">
-    <option value="#Meme culture">
-    <option value="#Science">
-    <option value="#Animals">
-    <option value="#Food Junkie">
-  </datalist>
-
-  <input list="interest" name="interest3">
-  <datalist id="interest3">
-    <option value="#Love">
-    <option value="#Fun">
-    <option value="#Fitness">
-    <option value="#Nature">
-    <option value="#Technology">
-    <option value="#Meme culture">
-    <option value="#Science">
-    <option value="#Animals">
-    <option value="#Food Junkie">
-  </datalist>
+    <label for='formCountries[]'>Select the countries that you have visited:</label><br>
+<select multiple="multiple" name="interests[]" size="1">
+    <option value="love">#Love </option>
+    <option value="fun">#Fun </option>
+    <option value="fitness">#Fitness</option>
+    <option value="nature">#Nature</option>
+    <option value="technology">#Technology</option>
   
+</select>
+ 
+
+    <!-- <input type="checkbox" name="interest[]" value="" /><br />
+    <input type="checkbox" name="interest[]" value="" /><br />
+    <input type="checkbox" name="interest[]" value="" /><br />
+    <input type="checkbox" name="interest[]" value="" /><br />
+    <input type="checkbox" name="interest[]" value="" /> -->
+
     <!-- <input type="checkbox" id="love" name="love">
 <label for="love">#Love</label><br>
 <input type="checkbox" id="fun" name="fun" >
