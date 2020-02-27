@@ -4,7 +4,6 @@
     session_start();
     if(isset($_POST['edit_profile']))
     {
-          
         $age = trim($_POST['age']);
         $email = trim($_POST['email']);
         $bio = trim($_POST['bio']);
@@ -44,7 +43,6 @@
         {
             echo("You didn't select any interests.");
         } 
-
         else 
         {
             if(!empty($love))
@@ -52,9 +50,19 @@
                 $sql = $db_connect->prepare("UPDATE `Users` SET love = 1 WHERE email='$email'");
                 $sql->execute();
             }
+            else 
+            {
+                $sql = $db_connect->prepare("UPDATE `Users` SET love = 0 WHERE email='$email'");
+                $sql->execute();
+            }
             if(!empty($fun))
             {
                 $sql = $db_connect->prepare("UPDATE `Users` SET fun = 1 WHERE email='$email'");
+                $sql->execute();
+            }
+            else
+            {
+                $sql = $db_connect->prepare("UPDATE `Users` SET fun = 0 WHERE email='$email'");
                 $sql->execute();
             }
             if(!empty($fitness))
@@ -62,38 +70,74 @@
                 $sql = $db_connect->prepare("UPDATE `Users` SET fitness = 1 WHERE email='$email'");
                 $sql->execute();
             }
+            else
+            {
+                $sql = $db_connect->prepare("UPDATE `Users` SET fitness = 0 WHERE email='$email'");
+                $sql->execute();
+            }
             if(!empty($nature))
             {
                 $sql = $db_connect->prepare("UPDATE `Users` SET nature = 1 WHERE email='$email'");
                 $sql->execute();
+            }
+            else
+            {
+                $sql = $db_connect->prepare("UPDATE `Users` SET nature = 0 WHERE email='$email'");
+                    $sql->execute();
             }
             if(!empty($tech))
             {
                 $sql = $db_connect->prepare("UPDATE `Users` SET tech = 1 WHERE email='$email'");
                 $sql->execute();
             }
+            else
+            {
+                $sql = $db_connect->prepare("UPDATE `Users` SET tech = 0 WHERE email='$email'");
+                    $sql->execute();
+            }
             if(!empty($meme))
             {
                 $sql = $db_connect->prepare("UPDATE `Users` SET meme = 1 WHERE email='$email'");
                 $sql->execute();
+            }
+            else
+            {
+                $sql = $db_connect->prepare("UPDATE `Users` SET meme = 0 WHERE email='$email'");
+                    $sql->execute();
             }
             if(!empty($science))
             {
                 $sql = $db_connect->prepare("UPDATE `Users` SET science = 1 WHERE email='$email'");
                 $sql->execute();
             }
+            else
+            {
+                $sql = $db_connect->prepare("UPDATE `Users` SET science = 0 WHERE email='$email'");
+                    $sql->execute();
+            }
             if(!empty($animals))
             {
                 $sql = $db_connect->prepare("UPDATE `Users` SET animals = 1 WHERE email='$email'");
                 $sql->execute();
             }
+            else
+            {
+                $sql = $db_connect->prepare("UPDATE `Users` SET animals = 0 WHERE email='$email'");
+                    $sql->execute();
+            }
             if(!empty($foodie))
             {
                 $sql = $db_connect->prepare("UPDATE `Users` SET foodie = 1 WHERE email='$email'");
                 $sql->execute();
+            }
+            else
+            {
+                $sql = $db_connect->prepare("UPDATE `Users` SET foodie = 0 WHERE email='$email'");
+                    $sql->execute();
+            }
+                    
         }
         echo 'Congratulations!! Your New Identity has been Created!';
         header('refresh:3; url="../profile.php"');
     }
-}
 ?>
