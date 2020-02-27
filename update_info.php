@@ -3,6 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="UTF-8">
     <title>Profile Update</title>
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -71,7 +72,7 @@
         
             <label for="pref"> I am interested in: </label> <br/><br/>
                 <div class="row">
-                    <div class="column" style="background-color:#aaa;" align="left">
+                    <div class="column" maxsize="3"  style="background-color:#aaa;" align="left">
                         <input type="checkbox" id="love" name="love"> #Love <br>
                     <input type="checkbox" id="fun" name="fun" > #Fun <br>
                     <input type="checkbox" id="fitness" name="fitness" > #Fitness<br>

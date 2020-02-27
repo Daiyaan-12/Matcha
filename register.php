@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="UTF-8">
 <title>Profile Information</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -10,6 +11,21 @@
 <!-- NAV_LINKS -->
     <link rel="stylesheet" href="./css/nav.css">
 
+<!-- NAV_FUNC-->
+<script>
+        function openNav()
+        {
+            document.getElementById('menu').style.width='250px';
+            document.getElementById('opennav').style.width='250px';
+        }
+
+        function closeNav() 
+        {
+            document.getElementById('menu').style.width='0px';
+            document.getElementById('opennav').style.width='0px';
+            
+        }
+    </script> <!-- END_NAV_FUNC -->
 
 </head>
 <body>
@@ -75,6 +91,11 @@ function showPosition(position) {
   "<br>Longitude: " + position.coords.longitude;
 }
 </script> -->
-<script async src="../js/nav.js"></script>
+<!-- <script src="./js/nav.js"></script> -->
+
 </body>
 </html>
+
+<?php
+    require "./footer.php"
+?>

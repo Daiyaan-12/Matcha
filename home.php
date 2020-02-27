@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+    <meta charset="UTF-8">
         <title>Sparklepony</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -36,3 +37,8 @@
         </ul>
     </body>
 </html>
+
+
+<?php
+    require "./footer.php"
+?>
