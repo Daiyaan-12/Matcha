@@ -10,11 +10,29 @@
 <!-- style -->
 <link rel="stylesheet" href="./css/styles.css">
 
+<!-- NAV_LINKS -->
+<link rel="stylesheet" href="./css/nav.css">
 
-</HEAD>
+
 </head>
 <body>
 
+<!-- NAV_SYSTEN -->
+<section> 
+    <nav>
+        <span id="opennav" class="open" onclick="openNav()"> &#9776; </span> <!-- burger menu tab -->
+        
+        <div id="`menu" class="nav"> 
+            <a href="#" class="closebtn" onclick="closeNav()"> &times; </a> 
+            <br>
+            <a href="./home.php"> <b> Home </b> </a> 
+            <a href="./index.php"> <b> Index </b> </a> 
+            <a href="./register.php"> <b> Sign up </b> </a>
+            <a href="./login.php"> <b> Login </b> </a>
+            <a href="./change_details.php"> <b> Bio </b> </a> 
+        </div>
+    </nav>
+</section>
 
 <!-- PWD_RESET_FORM -->
         <div><div class="form">
