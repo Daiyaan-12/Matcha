@@ -18,11 +18,11 @@
 
 <!-- PWD_RESET_FORM -->
         <div><div class="form">
-            <form action="includes/reset_pwd.inc.php" method="post" align="center">
+            <form action="./includes/reset_pwd.inc.php" method="post" align="center">
             <h2> Reset Your Password</h2>
             <label for="email"><b>Email Address</b></label> <br/>
                     <input type="text" placeholder="Email Address" name="email" required><br/>
-                <input type="hidden" name="email" value="<?php echo ($_GET['ID']);?>">
+                <input type="hidden" name="ID" value="<?php echo ($_GET['ID']);?>">
                 <label for="pwd"><b>New Password</b></label><br/>
                     <input type="password" placeholder="Enter Password" name="newpassword" required><br/>
                 <label for="pwd_confirm"><b>Confirm Password</b></label><br/>
@@ -30,7 +30,7 @@
                 <button type="submit" name="change_pwd" class="button button1">Update Password!</button>
             </form>
         </div> </div>
-
+        
 </body>
 </html>
 
