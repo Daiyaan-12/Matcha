@@ -29,7 +29,7 @@
                 else
                 {
                     echo 'Password Reset Link has been sent to your E-mail';
-                    header('refresh:3; url="../includes/verify_acc.php"');
+                    header('refresh:3; url="../login.php"');
                     die();
                 }
             }
