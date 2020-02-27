@@ -14,7 +14,10 @@ if (isset($_POST['login'])){
          $stmt->bindParam(":email", $email);
          $stmt->execute();
          $result = $stmt->fetch(PDO::FETCH_ASSOC);
+         var_dump($result);
          $passCheck = password_verify($password, $result['password']);
+         echo $result['password'];
+         echo $result['preference'];
          if (!$result)
             {
                 header("Location: ../login.php?error=nouser-or-accountnotverified");
@@ -28,11 +31,39 @@ if (isset($_POST['login'])){
             else if ($passCheck == true) 
             {
                 session_start();
-                $_SESSION['UserId'] = $result['user_id'];
+                $_SESSION['UserId'] = $result['UserID'];
                 $_SESSION['email'] = $result['email'];
-                $_SESSION['pp_src'] = $result['pp_src'];
+                $_SESSION['bio'] = $result['biography'];
                 $_SESSION['verify'] = $result['verified'];
-                header("Location: ../update_info.php");
+                $_SESSION['firstName'] = $result['FirstName'];
+                $_SESSION['lastName'] = $result['LastName'];
+                $_SESSION['age'] = $result['age'];
+                $_SESSION['gender'] = $result['gender'];
+                $_SESSION['preference'] = $result['preference'];
+                $_SESSION['love'] = $result['love'];
+                $_SESSION['fun'] = $result['fun'];
+                $_SESSION['fitness'] = $result['fitness'];
+                $_SESSION['nature'] = $result['nature'];
+                $_SESSION['tech'] = $result['tech'];
+                $_SESSION['meme'] = $result['meme'];
+                $_SESSION['science'] = $result['science'];
+                $_SESSION['animals'] = $result['animals'];
+                $_SESSION['foodie'] = $result['foodie'];
+                if(!empty($age))
+                {
+                    header("Location: ../profile.php");
+                }
+               echo$_SESSION['UserId'];
+                echo $_SESSION['email'];
+               echo $_SESSION['bio'];
+                echo$_SESSION['verify'];
+               echo $_SESSION['firstName'];
+               echo $_SESSION['lastName'];
+               echo $_SESSION['age'];
+               echo $_SESSION['gender'];
+               echo $result['preference'];
+               
+               header("Location: ../update_info.php");
                 exit();
             } 
             else 
