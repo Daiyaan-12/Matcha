@@ -23,6 +23,7 @@
         $sql->execute(); 
         // echo 'Congratulations!! Your New Identity has been Created!';
         
+        echo $row['gender'];
         if($row['gender'] = "female" || $row['gender'] = "male" || $row['gender'] = "other")
         {
             $sql = $db_connect->prepare("UPDATE `Users` SET gender= '$gender' WHERE email='$email'");
@@ -36,11 +37,13 @@
             $sql->execute();
         }
         
-        if (empty($foodie) && empty($animals) && empty($science) && empty($meme) && empty($tech) 
-        && empty($nature) && empty($fitness) && empty($git fun) && empty($love))
+        if (empty($foodie) && empty($animals) && empty($science) 
+            && empty($meme) && empty($tech) && empty($nature) 
+            && empty($fitness) && empty($fun) && empty($love))
         {
             echo("You didn't select any interests.");
         } 
+
         else 
         {
             if(!empty($love))
