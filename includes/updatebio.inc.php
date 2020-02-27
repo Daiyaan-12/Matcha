@@ -37,7 +37,7 @@
         }
         
         if (empty($foodie) && empty($animals) && empty($science) && empty($meme) && empty($tech) 
-        && empty($nature) && empty($fitness) && empty($fun) && empty($love))
+        && empty($nature) && empty($fitness) && empty($git fun) && empty($love))
         {
             echo("You didn't select any interests.");
         } 
@@ -55,7 +55,7 @@
             }
             if(!empty($fitness))
             {
-                $sql = $db_connect->prepare("UPDATE `Users` SET fitnessnature = 1 WHERE email='$email'");
+                $sql = $db_connect->prepare("UPDATE `Users` SET fitness = 1 WHERE email='$email'");
                 $sql->execute();
             }
             if(!empty($nature))

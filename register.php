@@ -6,8 +6,27 @@
 
 <!-- style -->
     <link rel="stylesheet" href="./css/styles.css">
+<!-- NAV_LINKS -->
+    <link rel="stylesheet" href="../css/nav.css">
+
 </head>
 <body>
+
+<!-- NAV_SYSTEN -->
+<section> 
+    <nav>
+        <span id="opennav" class="open" onclick="openNav()"> &#9776; </span> <!-- burger menu tab -->
+        
+        <div id="menu" class="nav"> 
+            <a href="#" class="closebtn" onclick="closeNav()"> &times; </a> 
+            <br>
+            <a href=""> <b> 1 </b> </a>
+            <a href=""> <b> 2 </b> </a>
+            <a href=""> <b> 3 </b> </a> 
+            <a href=""> <b> 4 </b> </a> 
+        </div>
+    </nav>
+</section>
 <h3>Register to Sparklepony's Love Chat</h3>
 <hr width="75%">
 
@@ -49,5 +68,6 @@ function showPosition(position) {
   "<br>Longitude: " + position.coords.longitude;
 }
 </script>
+<script async src="../js/nav.js"></script>
 </body>
 </html>

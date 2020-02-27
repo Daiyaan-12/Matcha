@@ -86,6 +86,6 @@ if (isset($_POST['sign-up'])) {
     }
     $db_connect = null;
 } else {
-    header("Location: ../signup.php");
+    header("Location: ../register.php");
     exit();
 }
