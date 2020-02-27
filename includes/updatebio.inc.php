@@ -4,6 +4,7 @@
     session_start();
     if(isset($_POST['edit_profile']))
     {
+          
         $age = trim($_POST['age']);
         $email = trim($_POST['email']);
         $bio = trim($_POST['bio']);
