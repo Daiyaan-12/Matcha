@@ -41,6 +41,7 @@
 <div class="form2">
     <form action="./includes/updatebio.inc.php" method="POST" align="center">
         <h2> Personalize Your Choices</h2>
+<br>
             <label for="email"> Account Confirmation: </label> <br/>
                 <input type="email" name="email" placeholder="Email Address" required> <br>
 
@@ -86,8 +87,20 @@
                 <input type="checkbox" id="foodie" name="foodie" > #Foodie <br>
 </div>
 </div>
-    
-        <button type="submit" class="button button1" name="edit_profile">Submit Changes</button>
+<br>
+    <label for="email"> Snap a picture!: </label> <br/>
+            <!-- WEB CAM -->
+    <div class = "video-wrap" style="align-self: center; float: center;"></div>
+        <video id="video" playsinline autoplay></video>
+        </div>
+
+        <!-- Webcam Video Snapshot -->
+    <canvas id="canvas" width="640" height="400" style="align-self: center; float: center;"></canvas>
+    <button id="snap" class="btn2" onclick="capture_img()" style="align-self: center; float: center;">Capture</button>
+        <form action="includes/save_image.inc.php" method="post">
+            <button id="upload" type="submit" class="btn2" name="upload" style="align-self: center; float: center;" onclick="upload_img()">Upload</button>
+        </form>
+        <button type="submit" class="button button1" name="edit_profile" style="align-self: center; float: center;">Submit Changes</button>
       
         <!-- <label for='formCountries[]'>Select the countries that you have visited:</label><br>
         <select multiple="multiple" name="interests[]" size="1">
@@ -114,6 +127,7 @@
     <button type="submit">logout</button>
     </form>
     <a href="edit_details.php"><button>Edit account details</button></a> -->
+    <script type="text/javascript" async src="js/photo.js"></script>
 </div>
 </body>
 </html>
