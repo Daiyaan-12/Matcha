@@ -31,6 +31,7 @@ if (isset($_POST['login'])){
             else if ($passCheck == true) 
             {
                 session_start();
+                $sql = "SELECT * FROM `users` WHERE email=:email AND verified = 1 AND age IS NOT NULL";
                 $_SESSION['UserId'] = $result['UserID'];
                 $_SESSION['email'] = $result['email'];
                 $_SESSION['bio'] = $result['biography'];
@@ -49,21 +50,14 @@ if (isset($_POST['login'])){
                 $_SESSION['science'] = $result['science'];
                 $_SESSION['animals'] = $result['animals'];
                 $_SESSION['foodie'] = $result['foodie'];
-                if(!empty($age))
+                if(!empty($_SESSION['age']))
                 {
                     header("Location: ../profile.php");
+                    exit();
                 }
-               echo$_SESSION['UserId'];
-                echo $_SESSION['email'];
-               echo $_SESSION['bio'];
-                echo$_SESSION['verify'];
-               echo $_SESSION['firstName'];
-               echo $_SESSION['lastName'];
-               echo $_SESSION['age'];
-               echo $_SESSION['gender'];
-               echo $result['preference'];
-               
-               header("Location: ../update_info.php");
+
+
+                header("Location: ../update_info.php");
                 exit();
             } 
             else 
