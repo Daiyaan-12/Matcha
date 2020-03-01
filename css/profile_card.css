@@ -1,0 +1,56 @@
+.profile_card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+    max-width: 100%;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+  }
+  
+  .title {
+    color: grey;
+    font-size: 18px;
+  }
+  
+  button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px 15px;
+    color: white;
+    text-decoration: none;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    margin: 4px 2px;
+    width: 100%;
+    font-size: 18px;
+  }
+
+  .button1
+{
+    background-color: black; 
+    color: black; 
+    border: 2px solid rgb(15, 22, 54);
+}
+
+
+
+  img {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+  }
+  
+  a {
+    text-decoration: none;
+    font-size: 22px;
+    color: black;
+  }
+  

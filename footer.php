@@ -2,13 +2,15 @@
 
 <HTML>
 <HEAD>
+<meta charset="UTF-8">
     <TITLE>FOOTER</TITLE>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
 </HEAD>
 <BODY>
-<footer>
-  Matcha || Sparklepony <hr> @dbadat | @kfrancis | @kmcgrego <br> <a href="./delete_acc.php"><div><button>DELETE MY ACCOUNT</button></div></a>
+<footer style="text-align:center; width:100%">
+  Matcha || Sparklepony <hr> @dbadat | @kfrancis | @kmcgrego @ntruter <br> <a href="./delete_acc.php"><div><button>DELETE MY ACCOUNT</button></div></a>
 
 </footer>
 </BODY>

@@ -68,8 +68,8 @@
                         <option name="pref" value="both">Both</option>
                         </select> -->
 
-        <label for="bio"> Bio </label> <br/><br/>
-            <textarea maxlength="300" placeholder="Let everyone know a litte bit about YOU. <max 300 characters>" name="bio"></textarea> <br><br/>
+        <label for="bio"> Bio </label> <br/>
+            <textarea rows="5" cols="100" maxlength="300" placeholder="Let everyone know a litte bit about YOU. <max 300 characters>" name="bio"></textarea> <br><br/>
         
             <label for="pref"> I am interested in: </label> <br/><br/>
                 <div class="row">
@@ -90,7 +90,7 @@
 <br>
     <label for="email"> Snap a picture!: </label> <br/>
             <!-- WEB CAM -->
-    <div class = "video-wrap" style="align-self: center; float: center;"></div>
+    <div class="video-wrap" style="align-self: center; float: center;"></div>
         <video id="video" playsinline autoplay></video>
         </div>
 
@@ -129,5 +129,11 @@
     <a href="edit_details.php"><button>Edit account details</button></a> -->
     <script type="text/javascript" async src="js/photo.js"></script>
 </div>
+
+<script async src="./js/nav.js"></script>
 </body>
 </html>
+
+<?php
+    require "./footer.php"
+?>

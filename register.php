@@ -11,22 +11,6 @@
 <!-- NAV_LINKS -->
     <link rel="stylesheet" href="./css/nav.css">
 
-<!-- NAV_FUNC-->
-<script>
-        function openNav()
-        {
-            document.getElementById('menu').style.width='250px';
-            document.getElementById('opennav').style.width='250px';
-        }
-
-        function closeNav() 
-        {
-            document.getElementById('menu').style.width='0px';
-            document.getElementById('opennav').style.width='0px';
-            
-        }
-    </script> <!-- END_NAV_FUNC -->
-
 </head>
 <body>
 
@@ -71,7 +55,7 @@
     <button type="submit" class="button button1" name="sign-up">Register</button>
     </form>
  </div>
-<a href="login.php"><button>Home</button></a>
+
 
 
 
@@ -93,6 +77,7 @@ function showPosition(position) {
 </script> -->
 <!-- <script src="./js/nav.js"></script> -->
 
+<script type="text/javascript" async src="./js/nav.js"></script>
 </body>
 </html>
 
