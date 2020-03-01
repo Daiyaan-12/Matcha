@@ -10,3 +10,6 @@ function closeNav()
             document.getElementById('opennav').style.width='0px';
             
         }
+
+
+

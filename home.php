@@ -32,10 +32,25 @@
 </section>
 <h1 class="mainheading" style="text-align: center; font-weight: bolder;">Ready to fing L&#10084;VE?</h1>
 <hr width="75%">
-        <ul>
-            <a href="update_info.php"><li>Update your bio</li></a>
-            <a href="edit_profile_verify.php"><li>Update your account info</li></a>
-        </ul>
+       
+
+
+
+<button class="open_chat_button" onclick="openChat()">Chat</button>
+
+<div class="popup_chat" id="myForm">
+  <form action="/action_page.php" class="chat_container">
+    <h1>Chat</h1>
+
+    <label for="chat_msg"><b>Message</b></label>
+    <textarea placeholder="Type message.." name="chat_msg" required></textarea>
+
+    <button type="submit" class="btn">Send</button>
+    <button type="button" class="btn cancel" onclick="closeChat()">Close</button>
+  </form>
+</div>
+<script async src="js/chat.js"></script>
+
     </body>
 </html>
 
