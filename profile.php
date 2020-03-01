@@ -76,27 +76,27 @@ $food = $_SESSION['foodie'];
         <h2>My interests include:<br>
         <?php
         if($fun == 1)
-        echo "Fun<br>";
+        echo "#Fun<br>";
         if($love == 1)
-        echo "Love<br>";
+        echo "#Love<br>";
         if($fit == 1)
-        echo "Fitness<br>";
+        echo "#Fitness<br>";
         if($nature == 1)
-        echo "Nature<br>";
+        echo "#Nature<br>";
         if($tech == 1)
-        echo "Technology<br>";
+        echo "#Technology<br>";
         if($meme == 1)
-        echo "Meme Culture<br>";
+        echo "#Meme Culture<br>";
         if($science == 1)
-        echo "Science<br>";
+        echo "#Science<br>";
         if($animals == 1)
-        echo "Animals<br>";
+        echo "#Animals<br>";
         if($food == 1)
-        echo "Foodie<br>";
+        echo "#Foodie<br>";
         ?>
         </h2>
     <a href="./update_info.php"><button>Bio Page</button></a>
-        <form action="./includes/login.inc.php" method="POST">
+        <form action="./logout.inc.php" method="POST">
         <button type="submit">Logout</button>
         </form>
     </body>
