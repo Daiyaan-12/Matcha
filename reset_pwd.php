@@ -35,10 +35,11 @@
     </nav>
 </section>
 
+<h1 class="mainheading" style="text-align: center; font-weight: bolder;"> Reset Your Password</h1>
+<hr width="75%"> <br>
 <!-- PWD_RESET_FORM -->
         <div><div class="form">
             <form action="./includes/reset_pwd.inc.php" method="post" align="center">
-            <h2> Reset Your Password</h2>
             <label for="email"><b>Email Address</b></label> <br/>
                     <input type="text" placeholder="Email Address" name="email" required><br/>
                 <input type="hidden" name="ID" value="<?php echo ($_GET['ID']);?>">

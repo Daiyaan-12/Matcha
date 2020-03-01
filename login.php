@@ -33,7 +33,8 @@
 </section>
 
     <div>
-    <h3>Sparklepony's love club</h3>
+    <h1 class="mainheading" style="text-align: center; font-weight: bolder;">Sparklepony's Love Club</h1>
+    <hr width="75%">
     </div>
     <div class="form">
         <form action="includes/login.inc.php" method="POST" align="center">

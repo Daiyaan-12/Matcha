@@ -30,7 +30,8 @@
         </div>
     </nav>
 </section>
-        <h1>Ready to find love?</h1>
+<h1 class="mainheading" style="text-align: center; font-weight: bolder;">Ready to fing L&#10084;VE?</h1>
+<hr width="75%">
         <ul>
             <a href="update_info.php"><li>Update your bio</li></a>
             <a href="edit_profile_verify.php"><li>Update your account info</li></a>

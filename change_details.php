@@ -2,19 +2,37 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Change Profile Information</title>
+<title>Matcha || Change Details</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
 <!-- style -->
     <link rel="stylesheet" href="./css/styles.css">
+<!-- NAV_LINKS -->
+    <link rel="stylesheet" href="./css/nav.css">
+    
+    <!-- NAV_SYSTEN -->
+    <section> 
+      <nav>
+        <span id="opennav" class="open" onclick="openNav()"> &#9776; </span> <!-- burger menu tab -->
+        
+        <div id="menu" class="nav"> 
+          <a href="#" class="closebtn" onclick="closeNav()"> &times; </a> 
+          <br>
+          <a href="./home.php"> <b> Home </b> </a> 
+          <a href="./index.php"> <b> Index </b> </a> 
+          <a href="./register.php"> <b> Sign up </b> </a>
+          <a href="./login.php"> <b> Login </b> </a>
+          <a href="./change_details.php"> <b> Bio </b> </a> 
+        </div>
+      </nav>
+    </section>
+  </head>
+  <body>
+<h1 class="mainheading" style="text-align: center; font-weight: bolder;">Update your account</h1>
+<hr width="75%">
 
-    <!-- NAV_LINKS -->
-<link rel="stylesheet" href="./css/nav.css">
-</head>
-<body>
-<h1>Update your account</h1>
-  <div class="form">
+<div class="form">
     <form action="./includes/change_details.inc.php" method="POST" align="center">
     <h2> Please complete all the fields </h2>
     <label for="firstname"> Name: </label> <br/>
@@ -32,10 +50,10 @@
     <label for="confirmpassword"> Confirm your Password: </label> <br/>
     <input type="password" name="pwd-repeat" placeholder="Password Reapeat" required>
     <br>
-    <button type="submit" name="changeInfo">Change info</button>
+    <button type="submit" name="changeInfo">Confirm Changes</button>
     </form>
  </div>
-<a href="home.php"><button>Home</button></a>
+
 <script>
 var x = document.getElementById("demo");
 

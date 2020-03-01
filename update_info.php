@@ -35,7 +35,7 @@
     </nav>
 </section>
 
-<h3>Enter Your profile Details</h3>
+<h1 class="mainheading" style="text-align: center; font-weight: bolder;">Enter Your profile Details</h1>
 <hr width="75%">
 
 <div class="form2">
