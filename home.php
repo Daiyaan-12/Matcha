@@ -1,3 +1,9 @@
+<?php
+require './config/database.php';
+session_start();
+$firstName = ($_SESSION['firstName']);
+$lastName = ($_SESSION['lastName']);
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -42,7 +48,7 @@
   <form action="/action_page.php" class="chat_container">
     <h1>Chat</h1>
 
-    <label for="chat_msg"><b>Message</b></label>
+    <label for="chat_msg"><b>Chat with <?php echo $firstName," ", $lastName ?> </b></label>
     <textarea placeholder="Type message.." name="chat_msg" required></textarea>
 
     <button type="submit" class="btn">Send</button>
