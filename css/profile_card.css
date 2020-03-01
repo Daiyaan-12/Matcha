@@ -8,7 +8,7 @@
   
   .profilename {
     color: black;
-    font-size: 30px;
+    font-size: 50px;
     text-align: center;
   }
   .title {
@@ -38,6 +38,24 @@
     border: 2px solid rgb(15, 22, 54);
 }
 
+.update_button
+{
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    size: 10%;
+    cursor: pointer;
+}
+
+.update_button .button1
+{
+    background-color: white; 
+    color: black; 
+    border: 2px solid rgb(15, 22, 54);
+}
 
 
   img {

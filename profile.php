@@ -32,6 +32,7 @@ $food = $_SESSION['foodie'];
     <link rel="stylesheet" href="./css/nav.css">
  <!-- RATING_LINKS -->
     <link rel="stylesheet" href="./css/rating.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
  <!-- profilecard_LINKS -->
      <link rel="stylesheet" href="./css/profile_card.css">
 
@@ -73,31 +74,47 @@ $food = $_SESSION['foodie'];
 
 <div class="profile_card">
         <p class="profilename"><?php echo $firstName," ", $lastName ?></p>
+        
+        <p> Rate my profile: </p> <br>
+  <div class="rating">
+  <input type="radio" name="star" id="star1">
+   <label for="star1"></label> 
+  <input type="radio" name="star" id="star2">
+  <label for="star2"></label> 
+  <input type="radio" name="star" id="star3">
+  <label for="star3"> </label>
+  <input type="radio" name="star" id="star4">
+  <label for="star4"> </label>
+  <input type="radio" name="star" id="star5">
+  <label for="star5"> </label>
+</div> <br> <br>
+
+
         <img src="./pp.jpeg" alt="Profile_Pic" height="500 width="500">
         <p class="title">My age is :<?php echo $age?></p>
         <p>I am a  :<?php echo $gender?></p>
         <p>My  Preference is: <?php echo $pref?></p>
         <p>A little bit about myself <br><?php echo $bio?></p>   
         <p class="title">My interests include:</p>
-        <p><?php
+        <p> <?php
         if($fun == 1)
-        echo "#Fun<br>";
+        echo "# Fun<br>";
         if($love == 1)
-        echo "#Love<br>";
+        echo "# Love<br>";
         if($fit == 1)
-        echo "#Fitness<br>";
+        echo "# Fitness<br>";
         if($nature == 1)
-        echo "#Nature<br>";
+        echo "# Nature<br>";
         if($tech == 1)
-        echo "#Technology<br>";
+        echo "# Technology<br>";
         if($meme == 1)
-        echo "#Meme Culture<br>";
+        echo "# Meme Culture<br>";
         if($science == 1)
-        echo "#Science<br>";
+        echo "# Science<br>";
         if($animals == 1)
-        echo "#Animals<br>";
+        echo "# Animals<br>";
         if($food == 1)
-        echo "#Foodie<br>";
+        echo "# Foodie<br>";
         ?>
         </p>
 </div>

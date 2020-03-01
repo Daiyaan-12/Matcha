@@ -12,7 +12,7 @@
 </HEAD>
 <BODY>
 <div class="footer" style="text-align:center; width:100%">
-  Matcha || Sparklepony <hr> @dbadat | @kfrancis | @kmcgrego @ntruter <br> <a href="./delete_acc.php"><div><button>DELETE MY ACCOUNT</button></div></a>
+  Matcha || Sparklepony <hr> @dbadat | @kfrancis | @kmcgrego | @ntruter <br> <a href="./delete_acc.php"><div><button>DELETE MY ACCOUNT</button></div></a>
 
 </footer>
 </BODY>
