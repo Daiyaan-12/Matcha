@@ -72,19 +72,14 @@ $food = $_SESSION['foodie'];
 </section>
 
 <div class="profile_card">
-        <h1 style="text-align:center" ><?php echo $firstName," ", $lastName ?></h1>
+        <p class="profilename"><?php echo $firstName," ", $lastName ?></p>
         <img src="./pp.jpeg" alt="Profile_Pic" height="500 width="500">
         <p class="title">My age is :<?php echo $age?></p>
         <p>I am a  :<?php echo $gender?></p>
         <p>My  Preference is: <?php echo $pref?></p>
-        <p>A little bit about myself <br><?php echo $bio?></p>
-        <br>
-        <br>
-        
-        
-        
-        <!-- <h2>My interests include:<br>
-        <?php
+        <p>A little bit about myself <br><?php echo $bio?></p>   
+        <p class="title">My interests include:</p>
+        <p><?php
         if($fun == 1)
         echo "#Fun<br>";
         if($love == 1)
@@ -104,7 +99,7 @@ $food = $_SESSION['foodie'];
         if($food == 1)
         echo "#Foodie<br>";
         ?>
-        </h2> -->
+        </p>
 </div>
 
     <a href="./update_info.php"><button>Bio Page</button></a>
@@ -183,7 +178,7 @@ $food = $_SESSION['foodie'];
   </div>
 </div> -->
 
-<script async src="./js/nav.js"></script>
+<script async src="js/nav.js"></script>
     </body>
     </html>
 

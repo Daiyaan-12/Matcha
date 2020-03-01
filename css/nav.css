@@ -37,21 +37,23 @@ header
     padding-top: 0;
     background-color: none;
     text-align: center;
-    font-size: 90px;
+    font-size: 50px;
     color: rgb(15, 22, 54);
     letter-spacing: 22px;
     text-decoration-style: italic;
 }
 
-footer 
+.footer 
 {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
     background-color: rgb(179, 179, 179);
     padding: 10px;
     text-align: center;
     color: white;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    margin: auto;
 }
 
 @media (max-width: 600px)

@@ -50,6 +50,7 @@
             </form>
         </div> </div>
         
+<script async src="./js/nav.js"></script>
 </body>
 </html>
 
