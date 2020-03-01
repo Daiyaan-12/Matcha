@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="UTF-8">
 <title>Change Profile Information</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
 <!-- style -->
     <link rel="stylesheet" href="./css/styles.css">
+
+    <!-- NAV_LINKS -->
+<link rel="stylesheet" href="./css/nav.css">
 </head>
 <body>
 <h1>Update your account</h1>
@@ -47,5 +52,7 @@ function showPosition(position) {
   "<br>Longitude: " + position.coords.longitude;
 }
 </script>
+
+<script async src="js/nav.js"></script>
 </body>
 </html>

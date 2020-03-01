@@ -11,15 +11,31 @@
 <!-- NAV_LINKS -->
     <link rel="stylesheet" href="./css/nav.css">
 
+<script>
+
+function openNav()
+        {
+            document.getElementById('menu').style.width='250px';
+            document.getElementById('opennav').style.width='250px';
+        }
+
+function closeNav()
+        {
+            document.getElementById('menu').style.width='0px';
+            document.getElementById('opennav').style.width='0px';
+            
+        }
+
+</script>
 </head>
 <body>
 
 <!-- NAV_SYSTEN -->
 <section> 
     <nav>
-        <span id="opennav" class="open" onclick="openNav()"> &#9776; </span> <!-- burger menu tab -->
+        <span id="opennav" class="open" onclick="openNav()"> &#9776; </span> burger menu tab
         
-        <div id="`menu" class="nav"> 
+        <div id="menu" class="nav"> 
             <a href="#" class="closebtn" onclick="closeNav()"> &times; </a> 
             <br>
             <a href="./home.php"> <b> Home </b> </a> 
@@ -77,7 +93,6 @@ function showPosition(position) {
 </script> -->
 <!-- <script src="./js/nav.js"></script> -->
 
-<script type="text/javascript" async src="./js/nav.js"></script>
 </body>
 </html>
 

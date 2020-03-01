@@ -20,7 +20,7 @@
     <nav>
         <span id="opennav" class="open" onclick="openNav()"> &#9776; </span> <!-- burger menu tab -->
         
-        <div id="`menu" class="nav"> 
+        <div id="menu" class="nav"> 
             <a href="#" class="closebtn" onclick="closeNav()"> &times; </a> 
             <br>
             <a href="./home.php"> <b> Home </b> </a> 

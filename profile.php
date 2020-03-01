@@ -36,21 +36,6 @@ $food = $_SESSION['foodie'];
  <!-- profilecard_LINKS -->
      <link rel="stylesheet" href="./css/profile_card.css">
 
-<!-- NAV_FUNC-->
-<script>
-        function openNav()
-        {
-            document.getElementById('menu').style.width='250px';
-            document.getElementById('opennav').style.width='250px';
-        }
-
-        function closeNav() 
-        {
-            document.getElementById('menu').style.width='0px';
-            document.getElementById('opennav').style.width='0px';
-            
-        }
-    </script> <!-- END_NAV_FUNC -->
 
 </head>
 <body>
@@ -60,7 +45,7 @@ $food = $_SESSION['foodie'];
     <nav>
         <span id="opennav" class="open" onclick="openNav()"> &#9776; </span> <!-- burger menu tab -->
         
-        <div id="`menu" class="nav"> 
+        <div id="menu" class="nav"> 
             <a href="#" class="closebtn" onclick="closeNav()"> &times; </a> 
             <br>
             <a href="./home.php"> <b> Home </b> </a> 
