@@ -11,8 +11,9 @@
 
 </HEAD>
 <BODY>
-<div class="footer" style="text-align:center; width:100%">
-  Matcha || Sparklepony <hr> @dbadat | @kfrancis | @kmcgrego | @ntruter <br> <a href="./delete_acc.php"><div><button>DELETE MY ACCOUNT</button></div></a>
+<footer>
+  <div class="footer" style="text-align:center; width:100%">
+  Matcha || Sparklepony <hr> @dbadat | @kfrancis | @kmcgrego | @ntruter <br> <a href="./delete_acc.php"><div><button class="button button1">DELETE MY ACCOUNT</button></div></a>
 
 </footer>
 </BODY>
