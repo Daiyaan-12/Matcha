@@ -42,7 +42,7 @@ $lastName = ($_SESSION['lastName']);
 
 
 
-<button class="open_chat_button" onclick="openChat()">Chat</button>
+<button class="form button button1" onclick="openChat()">Chat</button>
 
 <div class="popup_chat" id="myForm">
   <form action="/action_page.php" class="chat_container">

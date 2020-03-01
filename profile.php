@@ -106,7 +106,7 @@ $food = $_SESSION['foodie'];
 
     <a href="./update_info.php"><button>Bio Page</button></a>
         <form action="./logout.inc.php" method="POST">
-        <button class="button button1" type="submit">Logout</button>
+        <button class="form button button1" type="submit">Logout</button>
         </form>
 
 <!-- **************** -->
