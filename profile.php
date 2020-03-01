@@ -27,7 +27,7 @@ $food = $_SESSION['foodie'];
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
 <!-- style -->
-    <link rel="stylesheet" href="./css/styles.css">
+    <!-- <link rel="stylesheet" href="./css/styles.css"> -->
 <!-- NAV_LINKS -->
     <link rel="stylesheet" href="./css/nav.css">
  <!-- RATING_LINKS -->

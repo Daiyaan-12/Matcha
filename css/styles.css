@@ -14,7 +14,7 @@ div
 .form
 {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
-    max-width: 70%;
+    max-width: 600px;
     background-color: rgb(85, 140, 150);
     border: 5px solid rgb(85, 140, 150);
     margin: 0 auto;
@@ -23,7 +23,7 @@ div
 .form2
 {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
-    max-width: 70%;
+    max-width: 800px;
     background-color: rgb(85, 140, 150);
     border: 5px solid rgb(85, 140, 150);
     margin: 0 auto;
@@ -81,9 +81,10 @@ div
 
 .form button
 {
-    background-color: #4CAF50; /* Green */
-    border: none;
-    color: white;
+    background-color: white; 
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+    border: black;
+    color: black;
     padding: 8px 15px;
     text-align: center;
     text-decoration: none;
@@ -91,13 +92,6 @@ div
     font-size: 15px;
     margin: 4px 2px;
     cursor: pointer;
-}
-
-.form .button .button1
-{
-    background-color: white; 
-    color: black; 
-    border: 2px solid rgb(15, 22, 54);
 }
 
 
@@ -129,17 +123,17 @@ div
 /* FONTS */
 ************************************************************
 
-h1
+h1 .mainheading
 {
     font-family: "Atma 500", cursive, sans-serif;
     font-weight: bolder;
     font-optical-sizing: auto;
     overflow: fixed;
-    font-size: 90px;
+    font-size: 50px;
     color: rgb(15, 22, 54);
     padding-top: none;
     padding-bottom: none;
-    text-align-last: center;
+    text-align: center;
     letter-spacing: 22px;    
 }
 

@@ -10,44 +10,28 @@
     <link rel="stylesheet" href="./css/styles.css">
 <!-- NAV_LINKS -->
     <link rel="stylesheet" href="./css/nav.css">
-
-<script>
-
-function openNav()
-        {
-            document.getElementById('menu').style.width='250px';
-            document.getElementById('opennav').style.width='250px';
-        }
-
-function closeNav()
-        {
-            document.getElementById('menu').style.width='0px';
-            document.getElementById('opennav').style.width='0px';
-            
-        }
-
-</script>
-</head>
-<body>
-
-<!-- NAV_SYSTEN -->
-<section> 
-    <nav>
-        <span id="opennav" class="open" onclick="openNav()"> &#9776; </span> burger menu tab
+    
+    <!-- NAV_SYSTEN -->
+    <section> 
+      <nav>
+        <span id="opennav" class="open" onclick="openNav()"> &#9776; </span> <!-- burger menu tab -->
         
         <div id="menu" class="nav"> 
-            <a href="#" class="closebtn" onclick="closeNav()"> &times; </a> 
-            <br>
-            <a href="./home.php"> <b> Home </b> </a> 
-            <a href="./index.php"> <b> Index </b> </a> 
-            <a href="./register.php"> <b> Sign up </b> </a>
-            <a href="./login.php"> <b> Login </b> </a>
-            <a href="./change_details.php"> <b> Bio </b> </a> 
+          <a href="#" class="closebtn" onclick="closeNav()"> &times; </a> 
+          <br>
+          <a href="./home.php"> <b> Home </b> </a> 
+          <a href="./index.php"> <b> Index </b> </a> 
+          <a href="./register.php"> <b> Sign up </b> </a>
+          <a href="./login.php"> <b> Login </b> </a>
+          <a href="./change_details.php"> <b> Bio </b> </a> 
         </div>
-    </nav>
-</section>
-
-<h3>Register to Sparklepony's Love Chat</h3>
+      </nav>
+    </section>
+  </head>
+  <body>
+    
+    
+    <h1 class="mainheading" style="text-align: center; font-weight: bolder;"> Register to Sparklepony's Love Chat</h1>
 <hr width="75%">
 
   <div class="form">
@@ -91,7 +75,7 @@ function showPosition(position) {
   "<br>Longitude: " + position.coords.longitude;
 }
 </script> -->
-<!-- <script src="./js/nav.js"></script> -->
+<script src="./js/nav.js"></script>
 
 </body>
 </html>

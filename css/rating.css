@@ -22,6 +22,7 @@ body
 
 .rating label
 {
+    spacing: 22px; 
     display: block;
     cursor: pointer;
     widows: 35px;
