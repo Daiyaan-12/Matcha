@@ -21,14 +21,56 @@ $food = $_SESSION['foodie'];
 <!DOCTYPE html>
 <html>
     <head>
-        <title>My Profile</title>
-    </head>
-    <body>
+        <title>Matcha || My Profile</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+<!-- style -->
+    <link rel="stylesheet" href="./css/styles.css">
+<!-- NAV_LINKS -->
+    <link rel="stylesheet" href="./css/nav.css">
+
+<!-- NAV_FUNC-->
+<script>
+        function openNav()
+        {
+            document.getElementById('menu').style.width='250px';
+            document.getElementById('opennav').style.width='250px';
+        }
+
+        function closeNav() 
+        {
+            document.getElementById('menu').style.width='0px';
+            document.getElementById('opennav').style.width='0px';
+            
+        }
+    </script> <!-- END_NAV_FUNC -->
+
+</head>
+<body>
+
+<!-- NAV_SYSTEN -->
+<section> 
+    <nav>
+        <span id="opennav" class="open" onclick="openNav()"> &#9776; </span> <!-- burger menu tab -->
+        
+        <div id="`menu" class="nav"> 
+            <a href="#" class="closebtn" onclick="closeNav()"> &times; </a> 
+            <br>
+            <a href="./home.php"> <b> Home </b> </a> 
+            <a href="./index.php"> <b> Index </b> </a> 
+            <a href="./register.php"> <b> Sign up </b> </a>
+            <a href="./login.php"> <b> Login </b> </a>
+            <a href="./change_details.php"> <b> Bio </b> </a> 
+        </div>
+    </nav>
+</section>
+
         <h1>profile of <?php echo $firstName?> <?php echo $lastName ?></h1>
         <h2>My age is :<?php echo $age?></h2>
         <h2>I am a  :<?php echo $gender?></h2>
         <h2>My  Preference is: <?php echo $pref?></h2>
-        <h2>A little bit about myself ;p<br><?php echo $bio?></h2>
+        <h2>A little bit about myself <br><?php echo $bio?></h2>
         <br>
         <br>
         <h2>My interests include:<br>
