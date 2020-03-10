@@ -1,5 +1,28 @@
-<?php 
-// $name = $_SESSION['FirstName'];?>
+<?php
+
+require 'config/database.php'; 
+// $name = $_SESSION['FirstName'];?
+$UserID = $_SESSION['UserId'];
+//$username = $_SESSION['username'];
+//$email = $_SESSION['email'];
+$sql = "SELECT * FROM `images` ORDER BY ImageID DESC";
+$stmt = $db_connect->prepare($sql);
+$stmt1 = $db_connect->prepare($sql);
+// $stmt->bindParam(":userId", $user_id);
+$stmt->execute();
+$stmt1->execute();
+$count = $stmt->rowCount();
+if ($count > 0) {
+    $result = $stmt->fetchAll(PDO::FETCH_COLUMN, 2);
+    $image_id = $stmt1->fetchAll(PDO::FETCH_COLUMN, 0);
+    $total = count($result);
+    // $username = $result['image_src'];
+}
+else
+{
+    $total = 0;
+}
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -73,35 +96,66 @@
         
             <label for="pref"> I am interested in: </label> <br/><br/>
                 <div class="row">
-                    <div class="column" maxsize="3"  style="background-color:#aaa;" align="left">
+                    <div class="column" maxsize="3" align="left">
                         <input type="checkbox" id="love" name="love"> #Love <br>
                     <input type="checkbox" id="fun" name="fun" > #Fun <br>
                     <input type="checkbox" id="fitness" name="fitness" > #Fitness<br>
                     <input type="checkbox" id="nature" name="nature" > #Nature<br>
                     <input type="checkbox" id="tech" name="tech" > #Technology <br>
 </div>
-                    <div class="column" style="background-color:#aaa;"  align="left">
+                    <div class="column" align="left">
                 <input type="checkbox" id="meme" name="meme" > #Meme Culture <br>
                 <input type="checkbox" id="science" name="science" > #Science<br>
                 <input type="checkbox" id="animals" name="animals" > #Animals <br>
                 <input type="checkbox" id="foodie" name="foodie" > #Foodie <br>
 </div>
 </div>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<button name="upload" style="float: center;">submit changes</button>
+</form>
 <br>
-    <label for="email"> Snap a picture!: </label> <br/>
-            <!-- WEB CAM -->
-    <div class="video-wrap" style="align-self: center; float: center;"></div>
-        <video id="video" playsinline autoplay></video>
-        </div>
+<div style="align-self: center; float: center; position: relative; margin-top: 8%; border-color: grey; border-width: 10px; border-style: solid;">
+        <video id="video" width="640" height="400" autoPlay playsInline></video>
+    </div>
 
-        <!-- Webcam Video Snapshot -->
-    <canvas id="canvas" width="640" height="400" style="align-self: center; float: center;"></canvas>
-    <button id="snap" class="btn2" onclick="capture_img()" style="align-self: center; float: center;">Capture</button>
+    <!-- Trigger canvas web API -->
+    <div style="align-self: center; float: left;">
+        <button id="snap" class="btn2" onclick="capture_img()">Capture</button>
         <form action="includes/save_image.inc.php" method="post">
-            <button id="upload" type="submit" class="btn2" name="upload" style="align-self: center; float: center;" onclick="upload_img()">Upload</button>
+            <button id="upload" type="submit" class="btn2" name="upload" style="float;center:" onclick="upload_img()">Upload</button>
         </form>
-        <button type="submit" class="button button1" name="edit_profile" style="align-self: center; float: center;">Submit Changes</button>
-      
+        <input type="file" class="btn2" name="submit" value="Choose from gallery" id="fileToUpload" onclick="load_image()">
+    </div>
+    
+    <!-- Webcam Video Snapshot -->
+    <canvas id="canvas" style="align-self: center; float: center; position: relative; margin-top: 8%; border-color: grey; border-width: 10px; border-style: solid;" width="640px" height="400px"></canvas>
+​
+    <div class="gallery">
+		<h2>Thumbnail</h2>
+			<?php
+            $i = 0;
+			while ($i < $total)
+            { ?>
+                <form action="./includes/updatebio.inc.php" method="POST">
+                <img style ="float:center; margin: auto; margin-top: 20px; border-radius: 10px;" src="<?php echo $result[$i]; ?>">
+                <input type="hidden" name="imgid" value="<?php echo $image_id[$i];?>">
+                <button type="submit" name="profile_image" style="float: left;">Set as Profile Photo</button>
+            </form>
+                <form action='includes/delete.inc.php' method="post">
+                <input type="hidden" name="img_id" value="<?php echo $image_id[$i];?>">
+                <button type="submit" name="delete_image" style="float: right;">Delete</button>
+                </form>
+    </form>
+                
+            <?php 
+            $i++;
+            } 
+            ?>
+        </div>
         <!-- <label for='formCountries[]'>Select the countries that you have visited:</label><br>
         <select multiple="multiple" name="interests[]" size="1">
         <option value="love">#Love </option>
@@ -119,7 +173,7 @@
         <input type="checkbox" name="interest[]" value="" /><br />
         <input type="checkbox" name="interest[]" value="" /> -->
 
-    </form>
+
 
 
 
