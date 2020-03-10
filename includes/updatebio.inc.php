@@ -1,9 +1,9 @@
 <?php
     require '../config/database.php';
 
-    session_start();
-    if(isset($_POST['edit_profile']))
+    if(isset($_POST['upload']))
     {
+        session_start();
         $age = trim($_POST['age']);
         $email = trim($_POST['email']);
         $bio = trim($_POST['bio']);
@@ -139,5 +139,20 @@
         }
         echo 'Congratulations!! Your New Identity has been Created!';
         header('refresh:3; url="../profile.php"');
+        
     }
+    if(isset($_POST['profile_image']))
+    {
+            session_start();
+             $imgid = $_POST['imgid'];
+
+                 $query = "SELECT ImageID FROM images WHERE ImageID = '$imgid'";
+                 $stmt = $db_connect->prepare($query);
+                 $stmt->execute();
+                 $result = $stmt->fetch(PDO::FETCH_ASSOC);
+                 $_SESSION['imgid1'] = $result['ImageID'];
+                 header("Location: ../profile.php");
+                 exit();
+}
+
 ?>
