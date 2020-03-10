@@ -1,13 +1,16 @@
 <?php
 require './config/database.php';
-//require './includes/login.inc.php';
+
 session_start();
-$firstName = ($_SESSION['firstName']);
-$lastName = ($_SESSION['lastName']);
-$bio = ($_SESSION['bio']);
-$age = ($_SESSION['age']);
-$gender = ($_SESSION['gender']);
-$pref = ($_SESSION['preference']);
+//require './includes/login.inc.php';
+$imgid1 = $_SESSION['imgid1'];
+$UserID = $_SESSION['UserId'];
+$firstName = $_SESSION['firstName'];
+$lastName = $_SESSION['lastName'];
+$bio = $_SESSION['bio'];
+$age = $_SESSION['age'];
+$gender = $_SESSION['gender'];
+$pref = $_SESSION['preference'];
 $love = $_SESSION['love'];
 $fun = $_SESSION['fun'];
 $fit = $_SESSION['fitness'];
@@ -17,6 +20,10 @@ $meme = $_SESSION['meme'];
 $science = $_SESSION['science'];
 $animals = $_SESSION['animals'];
 $food = $_SESSION['foodie'];
+$sql = "SELECT img_title FROM images WHERE ImageID= $imgid1";
+$stmt = $db_connect->prepare($sql);
+$stmt->execute();
+$result = $stmt->fetch(PDO::FETCH_ASSOC);
 ?>
 <!DOCTYPE html>
 <html>
@@ -75,30 +82,36 @@ $food = $_SESSION['foodie'];
 </div> <br> <br>
 
 
-        <img src="./pp.jpeg" alt="Profile_Pic" height="500 width="500">
-        <p class="title">My age is :<?php echo $age?></p>
-        <p>I am a  :<?php echo $gender?></p>
-        <p>My  Preference is: <?php echo $pref?></p>
-        <p>A little bit about myself <br><?php echo $bio?></p>   
-        <p class="title">My interests include:</p>
+        <img src=<?php echo $result['img_title']?> style="width: 640px; height: 400px;">
+        <?php
+        $sql = "SELECT * FROM users WHERE UserID = $UserID";
+        $stmt = $db_connect->prepare($sql);
+        $stmt->execute();
+        $result = $stmt->fetch(PDO::FETCH_ASSOC);
+        ?>
+        <p class="title">My age is : <?php echo $result['age']?></p>
+        <p>I am a  : <?php echo $result['gender']?></p>
+        <p>My  Preference is: <?php echo $result['preference']?></p>
+        <p>A little bit about myself: <br><?php echo $result['biography']?></p>   
+        <p class="title">My interests include: </p>
         <p> <?php
-        if($fun == 1)
+        if($result['fun'] == 1)
         echo "# Fun<br>";
-        if($love == 1)
+        if($result['love'] == 1)
         echo "# Love<br>";
-        if($fit == 1)
+        if($result['fitness'] == 1)
         echo "# Fitness<br>";
-        if($nature == 1)
+        if($result['nature']== 1)
         echo "# Nature<br>";
-        if($tech == 1)
+        if($result['tech'] == 1)
         echo "# Technology<br>";
-        if($meme == 1)
+        if($result['meme'] == 1)
         echo "# Meme Culture<br>";
-        if($science == 1)
+        if($result['science'] == 1)
         echo "# Science<br>";
-        if($animals == 1)
+        if($result['animals'] == 1)
         echo "# Animals<br>";
-        if($food == 1)
+        if($result['foodie'] == 1)
         echo "# Foodie<br>";
         ?>
         </p>
@@ -106,7 +119,7 @@ $food = $_SESSION['foodie'];
 
     <a href="./update_info.php"><button>Bio Page</button></a>
         <form action="./logout.inc.php" method="POST">
-        <button class="form button button1" type="submit">Logout</button>
+      <button class="form button button1" type="submit" style="color: white;">Logout</button>
         </form>
 
 <!-- **************** -->
