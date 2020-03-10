@@ -20,6 +20,10 @@ h1 .mainheading
 /* FORM STYLES */
 ********************************************************************
 
+.footer{
+  float: bottom;
+}
+
 div
 {
     border-radius: 5px;
