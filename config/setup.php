@@ -2,7 +2,7 @@
 
     $host = "localhost";
     $user = "root";
-    $pass = "wethinkcode";
+    $pass = "Francis1974";
     $db = "Matcha";
 
     try
@@ -63,8 +63,8 @@
         //creating image database table
       $img_table = "CREATE TABLE IF NOT EXISTS Images (
         ImageID INT(255) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-        UserID VARCHAR(30) NOT NULL, 
-        img_title TEXT,
+        UserID VARCHAR(255) NOT NULL,
+        img_title TEXT NOT NULL,
         likes INT(11) UNSIGNED,
         img_base64 LONGBLOB NOT NULL,
         reg_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
