@@ -22,6 +22,9 @@ h1 .mainheading
 
 .footer{
   float: bottom;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
 div
